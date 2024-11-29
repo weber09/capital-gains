@@ -5,7 +5,7 @@ A Java application that calculates taxes on stock trading operations following s
 ## Solution Architecture
 
 ### Overview
-The application follows SOLID principles and uses a combination of Strategy and Chain of Responsibility patterns to handle different types of operations (buy/sell) and their tax calculations.
+The application follows SOLID principles and uses Strategy pattern to handle different types of operations (buy/sell) and their tax calculations.
 
 ### Core Components
 
@@ -20,7 +20,7 @@ The application follows SOLID principles and uses a combination of Strategy and 
 
 #### 3. Context Management
 - `CapitalGainsContext` maintains state between operations
-- Tracks stocks quantity, medium price, and accumulated losses
+- Track stocks quantity, medium price, and accumulated losses
 - Reason: Encapsulates state management, preventing global variables
 
 #### 4. Main Handler
@@ -38,11 +38,7 @@ The application follows SOLID principles and uses a combination of Strategy and 
     - Used throughout the application
     - Reason: Improves testability and follows SOLID principles
 
-3. **Chain of Responsibility**
-    - Allows sequential processing of operations
-    - Reason: Makes it easy to add new operation types without modifying existing code
-
-4. **Strategy Pattern**
+3. **Strategy Pattern**
     - Different strategies for different operation types
     - Reason: Encapsulates varying algorithms and makes them interchangeable
 
